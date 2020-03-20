@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+@model HairSalon.Models.Stylist;
+
+<div class="home">
+
+  <div class="card text-white bg-dark mb-3" style="max-width: 32rem;">
+    <div class="text-center card-header">
+      <h4>Add A New Stylist</h4>
+    </div>
+    <div class="text-center card-body">
+      <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name, new { @class="form-control"})
+      </div>
+      <input type="submit" value="Add" class="btn btn-light">
+    </div>
+    <p class="text-center">
+      @Html.ActionLink("Show All", "Index", null, htmlAttributes: new { @class = "btn btn-light btn-md" })
+    </p>
+  </div>
+</div>
