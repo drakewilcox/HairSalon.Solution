@@ -18,7 +18,7 @@ namespace HairSalon.Controllers
 
     public ActionResult Index()
     {
-      List<Client> model = _db.Restaurants.Include(Clients => Clients.Stylist).ToList();
+      List<Client> model = _db.Clients.Include(Clients => Clients.Stylist).ToList();
       return View(model);
     }
     public ActionResult Create()
@@ -29,7 +29,7 @@ namespace HairSalon.Controllers
     [HttpPost]
     public ActionResult Create(Client client)
     {
-      _db.Clients.Add(clients);
+      _db.Clients.Add(client);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
