@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+@using HairSalon.Models;
+@model List<HairSalon.Models.Stylist>;
+
+<div class="home">
+
+  <div class="card text-white bg-dark mb-3" style="max-width: 32rem;">
+    <div class="text-center card-header">
+      <h4>Stylists</h4>
+    </div>
+    <div class="card-body">
+      @if (@Model.Count == 0)
+      {
+        <p> No Stylists have been added yet!</p>
+      }
+      @foreach (Stylist stylist in Model)
+      {
+        <li> @Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId})</li>
+      }
+    </div>
+    <p class="text-center">
+      @Html.ActionLink("Add New Stylist", "Create", null, htmlAttributes: new { @class = "btn btn-light btn-md" })
+    </p>
+  </div>
+
+</div>
