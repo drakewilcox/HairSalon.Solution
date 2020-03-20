@@ -5,8 +5,7 @@
 @model List<HairSalon.Models.Stylist>;
 
 <div class="home">
-
-  <div class="card text-white bg-dark mb-3" style="max-width: 32rem;">
+  <div class="card text-white bg-dark mb-3" style="width: 20rem;">
     <div class="text-center card-header">
       <h4>Stylists</h4>
     </div>
@@ -17,12 +16,12 @@
       }
       @foreach (Stylist stylist in Model)
       {
-        <li> @Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId})</li>
+        <p class="text-center"> @Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId}, new { @class = "link" })</p>
       }
     </div>
+    <hr>
     <p class="text-center">
       @Html.ActionLink("Add New Stylist", "Create", null, htmlAttributes: new { @class = "btn btn-light btn-md" })
     </p>
   </div>
-
 </div>
