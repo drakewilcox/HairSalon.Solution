@@ -31,12 +31,12 @@ cd desktop
 
 * Clone the file from GitHub by typing:
 ```sh
-git clone  https://github.com/dustatron/Best-Restaurants.git
+git clone  https://github.com/drakewilcox/HairSalon.Solution.git
 ```
 
 * Navigate to the project folder by typing:
 ```sh
-cd Best-Restaurants/BestRestaurants
+cd HairSalon.Solution/HairSalon
 ```
 * Restore the project with this terminal command:
 ```sh
@@ -50,12 +50,12 @@ mysql -uroot -p{your password}
 
 * Create a new table by typing:
 ```sh
-CREATE DATABASE best_restaurant;
+CREATE DATABASE drake_wilcox;
 ```
 
 * Open your new database by typing:
 ```sh
-USE best_restaurant;
+USE drake_wilcox;
 ```
 
 * Create Cuisine table by typing:
