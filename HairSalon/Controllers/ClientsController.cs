@@ -38,6 +38,8 @@ namespace HairSalon.Controllers
       Client thisClient = _db.Clients.FirstOrDefault(clients => clients.ClientId == id);
       Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == thisClient.StylistId);
       
+      ViewBag.Stylist = thisStylist.Name;
+
       return View(thisClient);
     }
   }
