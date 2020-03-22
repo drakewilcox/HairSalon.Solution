@@ -8,6 +8,7 @@
   <div class="card text-white bg-dark mb-3" style="width: 20rem;">
     <div class="text-center card-header">
       <h4>@Html.DisplayFor(model => model.Name)'s Clients:</h4>
+      <p>Specialty @Html.DisplayFor(model => model.Specialty)</p>
     </div>
     <div class="card-body text-center">
       @if (@Model.Clients.Count == 0)
