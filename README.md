@@ -23,7 +23,6 @@ _Make sure you have these tools installed on your computer:_
 
 _In Terminal:_
 
-
 * Using your terminal navigate to where you want to save this project by typing:
 ```sh
 cd desktop
@@ -43,7 +42,7 @@ cd HairSalon.Solution/HairSalon
 dotnet restore
 ```
 
-* Open up MySql in your terminal with this command:
+* Open up MySql in your terminal with this command (do not include curly brackets):
 ```sh
 mysql -uroot -p{your password}
 ```
@@ -58,57 +57,39 @@ CREATE DATABASE drake_wilcox;
 USE drake_wilcox;
 ```
 
-* Create Cuisine table by typing:
+* Create Stylist table by typing:
 ```sh
-CREATE TABLE `cuisines` (
-  `CuisineId` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `stylists` (
+  `StylistId` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`CuisineId`)
+  `Specialty` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`StylistId`)
 );
 ```
-
-* Create Restaurants table by typing:
+* Create Clients table by typing:
 ```sh
-CREATE TABLE `restaurants` (
-  `RestaurantId` int(11) NOT NULL AUTO_INCREMENT,
-  `CuisineId` int(11) DEFAULT '0',
+CREATE TABLE `clients` (
+  `ClientId` int(11) NOT NULL AUTO_INCREMENT,
+  `StylistId` int(11) DEFAULT '0',
   `Name` varchar(255) DEFAULT NULL,
-  `Address` varchar(255) DEFAULT NULL,
-  `Hours` varchar(255) DEFAULT NULL,
-  `Rating` int(10) DEFAULT NULL,
-  `KeyWords` text,
-  PRIMARY KEY (`RestaurantId`)
+  `PhoneNumber` varchar(255) DEFAULT NULL,
+  `HairStyle` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ClientId`)
 );
 ```
-
-* Create a Reviews table by typing:
-```sh
-CREATE TABLE `reviews` (
-  `ReviewId` int(11) NOT NULL AUTO_INCREMENT,
-  `RestaurantId` int(11) DEFAULT '0',
-  `UserName` varchar(255) DEFAULT NULL,
-  `ReviewBody` text,
-  `Rating` int(11) DEFAULT NULL,
-  PRIMARY KEY (`ReviewId`)
-);
-```
-
 * Now exit MySql by typing:
 ```sh
 exit;
 ```
-
 * Then start the webserver by typing:
 ```sh
 dotnet run
 ```
-
 * Open your web browser and navigate to localhost:5000
 ```sh
 http://localhost:5000/
 ```
-
-* If your setup worked you should see a welcome page with a rainbow background. 
+* If your setup worked you should see a homepage with a navbar and photo. 
 
 **Note: To exit, simply press**
 ```sh
@@ -140,3 +121,5 @@ This tool is provided as is.
 *This webpage is licensed under the MIT license.*
 
 Copyright (c) 2020 **_Drake Wilcox_**
+
+
