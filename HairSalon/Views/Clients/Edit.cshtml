@@ -1,0 +1,33 @@
+@{
+  Layout = "_Layout";
+}
+@model HairSalon.Models.Client;
+
+<div class="home">
+
+  <div class="card text-white bg-dark mb-3" style="max-width: 32rem;">
+    <div class="text-center card-header">
+      <h4>Edit Client: @Html.DisplayFor(model => model.Name)</h4>
+    </div>
+    <div class="text-center card-body">
+    @using (Html.BeginForm())
+    {
+      @Html.HiddenFor(model => model.ClientId)
+      <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name, new { @class="form-control"})
+      </div>
+      <div class="form-group">
+        @Html.LabelFor(model => model.PhoneNumber)
+        @Html.EditorFor(model => model.PhoneNumber, new { @class="form-control"})
+      </div>
+      <div class="form-group">
+        @Html.LabelFor(model => model.HairStyle)
+        @Html.EditorFor(model => model.HairStyle, new { @class="form-control"})
+      </div>
+      <input type="submit" value="Edit" class="btn btn-light">
+      @Html.ActionLink("Back", "Details", "Clients", new {id = Model.ClientId}, htmlAttributes: new { @class = "btn btn-light btn-md" })
+    }
+    </div>
+  </div>
+</div>
