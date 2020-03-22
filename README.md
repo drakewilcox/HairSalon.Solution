@@ -5,13 +5,22 @@
 #### By _**Drake Wilcox**_
 
 ## Description
-
+ _The purpose of this project was to use EF Core and SQL Databases to create an MVC web application for Eau Claire's Salon. This application allows the user to view and add to a list of stylists at the salon and see a list of clients that belong to each specific stylist. The application prevents the user from adding clients if no stylist has been added, and also allows the user to edit and delete all information in the database._
 
 ## Project Specifications
 
 | Behavior | Input | Output |
 |---|:---:|:---:| 
-||||
+|Application displays Home Splash Page with link to add stylist | localhost:5000/ | Eau Claire's Salon |
+| From the /Stylists page, the user can be directed to add a new stylist page | Click: "Add New Stylist" | Add Stylist Form |
+| When the user submits form, a new instance of a Stylist Object is created and is displays on the Stylist Index page | Click: "Add New Stylist" | Stylists: "Submitted Stylist" | 
+| 
+| When the user clicks on a stylist name, details of that specific stylist are displayed | Click: "Stylist Name" | Stylist Details: |
+| User can be directed to an add client page, and when they submit a form, a new instance of a Client object is created and displayed on Stylist Details page | Input: "Add Client" => "Add" | Stylist Clients: "New Submitted Client" | 
+| When a user click on a specific client, they are directed to a detail page for that client | Click: "Client Name" | Client Details |
+| User can Delete specific Stylists and Clients | "Delete" | Confirm Delete | 
+| User can Edit specific Stylists and Clients | "Edit" | Confirm Edit | 
+
 
 ## Setup/Installation Requirements
 _Make sure you have these tools installed on your computer:_
