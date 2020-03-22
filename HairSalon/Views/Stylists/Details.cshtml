@@ -4,7 +4,7 @@
 @using HairSalon.Models;
 @model HairSalon.Models.Stylist;
 
-<div class="home">
+<div class="home text-center">
   <div class="card text-white bg-dark mb-3" style="width: 20rem;">
     <div class="text-center card-header">
       <h4>@Html.DisplayFor(model => model.Name)'s Clients:</h4>
@@ -20,10 +20,14 @@
       }
     </div>
     <hr>
-    <p class="text-center">
-      @Html.ActionLink("Add A Client", "Create", "Clients", new { id = Model.StylistId }, htmlAttributes: new { @class = "btn btn-light btn-md" })
-
-      @Html.ActionLink("Back to Stylist List", "Index", null, htmlAttributes: new { @class = "btn btn-light btn-md" })
+    <p>
+      @Html.ActionLink("Add A Client", "Create", "Clients", new { id = Model.StylistId }, htmlAttributes: new { @class = "btn btn-light btn-sm" })
+    </p>
+    <p>
+      @Html.ActionLink("Back to Stylist List", "Index", null, htmlAttributes: new { @class = "btn btn-light btn-sm" })
+    </p>
+    <p>
+      @Html.ActionLink("Delete", "Delete", new { id = Model.StylistId },htmlAttributes: new { @class = "btn btn-light btn-sm" })
     </p>
   </div>
 </div>

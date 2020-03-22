@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Stylist
+
+<div class="home text-center">
+  <div class="card text-white bg-dark mb-3" style="width: 20rem;">
+    <div class="text-center card-header">
+      <h4>Confirm Delete:</h4>
+    </div>
+    <div class="card-body">
+      <p>Stylist: @Html.DisplayFor(model => model.Name)</p>
+      <hr>
+    </div>
+    <p class="text-center">
+      @using (Html.BeginForm())
+      {
+        <input type="submit" value="Delete"/>
+      }
+    </p>
+    @Html.ActionLink("View All Stylists", "Details", "Stylists", null, htmlAttributes: new { @class = "btn btn-light btn-sm" })
+  </div>
+</div>
