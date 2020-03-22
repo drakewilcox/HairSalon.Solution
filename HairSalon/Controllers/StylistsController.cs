@@ -41,7 +41,6 @@ namespace HairSalon.Controllers
       var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       return View(thisStylist);
     }
-
     [HttpPost]
     public ActionResult Edit(Stylist stylist)
     {
@@ -54,7 +53,6 @@ namespace HairSalon.Controllers
       var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       return View(thisStylist);
     }
-
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
