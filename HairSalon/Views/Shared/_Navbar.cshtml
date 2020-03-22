@@ -12,16 +12,14 @@
       <li class="nav-item">
         <a class="nav-link" href="/Stylists">Stylists</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/Clients">Clients</a>
-      </li>
     </ul>
-    <div class="form-inline my-2 my-lg-0"></form>
+    @* FUTURE SEARCH FUNCTION *@
+    @* <div class="form-inline my-2 my-lg-0"></form>
       @using (Html.BeginForm("search","Stylists")) 
       {
         <input type="text" name="search" class="form-control mr-sm-2"/>
         <input type="submit" value="Search" class="btn btn-outline-success my-2 my-sm-0">
       }
-    </div>
+    </div> *@
   </div>
 </nav>
