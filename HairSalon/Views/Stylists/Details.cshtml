@@ -23,11 +23,8 @@
     <hr>
     <p>
       @Html.ActionLink("Add A Client", "Create", "Clients", new { id = Model.StylistId }, htmlAttributes: new { @class = "btn btn-light btn-sm" })
-    </p>
-    <p>
-      @Html.ActionLink("Back to Stylist List", "Index", null, htmlAttributes: new { @class = "btn btn-light btn-sm" })
-    </p>
-    <p>
+      @Html.ActionLink("Back", "Index", null, htmlAttributes: new { @class = "btn btn-light btn-sm" })
+      @Html.ActionLink("Edit", "Edit", new { id = Model.StylistId }, htmlAttributes: new { @class = "btn btn-light btn-sm" })
       @Html.ActionLink("Delete", "Delete", new { id = Model.StylistId },htmlAttributes: new { @class = "btn btn-light btn-sm" })
     </p>
   </div>
